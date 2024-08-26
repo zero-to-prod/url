@@ -1,0 +1,27 @@
+{
+  "type": "library",
+  "name": "zero-to-prod/url",
+  "description": "A Model of a Url",
+  "keywords": [
+    "zero-to-prod",
+    "Url"
+  ],
+  "homepage": "https://github.com/zero-to-prod/url",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Smith",
+      "email": "dave0016@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1 || ~7.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zerotoprod\\Url\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
