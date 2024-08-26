@@ -14,13 +14,15 @@ composer require zerotoprod/url
 ```php
 use Zerotoprod\Url\Url;
 
-// Using parse_url()
 $url = Url::from(
     parse_url('example.com')
 ); 
-$url->host // 'example.com'
 
+echo $url->host // 'example.com'
 
+/**
+ * From an array 
+ */
 $url = Url::from(
     [
         Url::scheme => 'https',
