@@ -8,7 +8,7 @@ namespace Zerotoprod\Url;
  *
  * Represents the components of a parsed URL.
  */
-class Url
+readonly class Url
 {
 
     public const scheme = 'scheme';
@@ -22,59 +22,43 @@ class Url
 
     /**
      * The scheme component of the URL (e.g., "http" or "https").
-     *
-     * @var string|null
      */
-    public readonly ?string $scheme;
+    public string $scheme;
 
     /**
      * The host component of the URL (e.g., "www.example.com").
-     *
-     * @var string|null
      */
-    public readonly ?string $host;
+    public string $host;
 
     /**
      * The port component of the URL (e.g., "80" or "443").
-     *
-     * @var int|null
      */
-    public readonly ?int $port;
+    public int $port;
 
     /**
      * The user component of the URL (e.g., "username" in "username:password@example.com").
-     *
-     * @var string|null
      */
-    public readonly ?string $user;
+    public string $user;
 
     /**
      * The password component of the URL (e.g., "password" in "username:password@example.com").
-     *
-     * @var string|null
      */
-    public readonly ?string $pass;
+    public string $pass;
 
     /**
      * The path component of the URL (e.g., "/path/to/page").
-     *
-     * @var string|null
      */
-    public readonly ?string $path;
+    public string $path;
 
     /**
      * The query component of the URL (e.g., "query=string" in "?query=string").
-     *
-     * @var string|null
      */
-    public readonly ?string $query;
+    public string $query;
 
     /**
      * The fragment component of the URL (e.g., "section1" in "#section1").
-     *
-     * @var string|null
      */
-    public readonly ?string $fragment;
+    public string $fragment;
 
     public static function from($items = null): self
     {
