@@ -25,56 +25,56 @@ class Url
      *
      * @var string|null
      */
-    public $scheme;
+    public ?string $scheme;
 
     /**
      * The host component of the URL (e.g., "www.example.com").
      *
      * @var string|null
      */
-    public $host;
+    public ?string $host;
 
     /**
      * The port component of the URL (e.g., "80" or "443").
      *
      * @var int|null
      */
-    public $port;
+    public ?int $port;
 
     /**
      * The user component of the URL (e.g., "username" in "username:password@example.com").
      *
      * @var string|null
      */
-    public $user;
+    public ?string $user;
 
     /**
      * The password component of the URL (e.g., "password" in "username:password@example.com").
      *
      * @var string|null
      */
-    public $pass;
+    public ?string $pass;
 
     /**
      * The path component of the URL (e.g., "/path/to/page").
      *
      * @var string|null
      */
-    public $path;
+    public ?string $path;
 
     /**
      * The query component of the URL (e.g., "query=string" in "?query=string").
      *
      * @var string|null
      */
-    public $query;
+    public ?string $query;
 
     /**
      * The fragment component of the URL (e.g., "section1" in "#section1").
      *
      * @var string|null
      */
-    public $fragment;
+    public ?string $fragment;
 
     public static function from($items = null): self
     {
