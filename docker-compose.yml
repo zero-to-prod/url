@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  php72composer:
+    build:
+      context: docker/php72
+      target: composer
+    volumes:
+      - ./:/app
+
+  php72:
+    build:
+      context: docker/php72
+      target: php
+    volumes:
+      - ./:/app
+
+  php74format:
+    image: ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3.57.0-php7.4}
+    volumes:
+      - ./:/code
+    command: fix src
+
+  php80composer:
+    build:
+      context: docker/php80
+      target: composer
+    volumes:
+      - ./:/app
+
+  php80:
+    build:
+      context: docker/php80
+      target: php
+    volumes:
+      - ./:/app

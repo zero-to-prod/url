@@ -10,9 +10,16 @@ You can install the package via Composer:
 composer require zerotoprod/url
 ```
 
-** Usage
+## Usage
+
+Use the `from()` static method to map array keys to class properties.
+
+It is recommended to extend your own Url class with the `\Zerotoprod\Url\Url` class.
+
 ```php
-use Zerotoprod\Url\Url;
+class Url extends \Zerotoprod\Url\Url
+{
+}
 
 $url = Url::from(
     parse_url('example.com')
@@ -32,4 +39,33 @@ $url = Url::from(
 );
 
 echo $url->host; // 'example.com'
+```
+
+## Suggested Traits
+
+### Transformable
+
+The [Transformable](https://github.com/zero-to-prod/transformable) trait provides methods to convert an object’s properties into an array or a JSON
+string. This is particularly useful for serializing your data models.
+
+```bash
+composer require zerotoprod/transformable
+```
+
+#### Usage
+
+To use the `Zerotoprod\Transformable\Transformable` trait in your class, simply include it:
+
+```php
+class Url extends \Zerotoprod\Url\Url
+{
+    use \Zerotoprod\Transformable\Transformable;
+}
+
+$Url = Url::from(
+    parse_url('example.com')
+);
+
+$array = $Url->toArray();
+$json = $Url->toJson();
 ```
