@@ -1,4 +1,4 @@
-# Zerotoprod URL
+# `Zerotoprod\Url`
 
 A PHP class for representing URL components.
 
