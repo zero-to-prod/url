@@ -73,7 +73,7 @@ $json = $Url->toJson();
 ### Parsable
 The Parsable trait provides a method for parsing a URL string and ensuring that it starts with a supported protocol. This is useful when you want to handle various types of URLs and ensure they conform to a specific format before processing.
 
-Installation
+#### Installation
 The Parsable trait is included within this package, so no additional installation is required.
 
 #### Usage

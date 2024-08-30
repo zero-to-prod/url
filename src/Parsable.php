@@ -18,15 +18,15 @@ trait Parsable
      * $urlWithCustomProtocol = Url::parse('example.com', ['http://', 'custom://'], 'custom://');
      * ```
      *
-     * @param string  $url               The URL string to parse. If it does not start with a supported protocol,
-     *                    the default protocol will be prepended.
+     * @param  string  $url               The URL string to parse. If it does not start with a supported protocol,
+     *                                    the default protocol will be prepended.
      *
-     * @param string  $default_protocol  The default protocol to prepend if the URL does not start with
-     *                         list of common protocols will be used. Examples include 'http://',
-     *                         'https://', 'ssl://', 'ftp://', etc.
+     * @param  string  $default_protocol  The default protocol to prepend if the URL does not start with
+     *                                    list of common protocols will be used. Examples include 'http://',
+     *                                    'https://', 'ssl://', 'ftp://', etc.
      *
-     * @param array   $protocols         An optional array of supported protocols. If not provided, a default
-     *                                 a supported protocol. Defaults to 'https://'.
+     * @param  array   $protocols         An optional array of supported protocols. If not provided, a default
+     *                                    a supported protocol. Defaults to 'https://'.
      *
      * @return Url An instance of the `Url` class representing the parsed URL.
      *
