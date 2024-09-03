@@ -12,10 +12,10 @@ trait Parsable
      * protocols, the method will prepend a default protocol to the URL before
      * parsing it. The method then returns a `Url` object created from the parsed URL.
      *
-     * ### Example Usage:
-     * ```php
-     * $url = Url::parse('example.com'); // Defaults to 'https://example.com'
-     * $urlWithCustomProtocol = Url::parse('example.com', ['http://', 'custom://'], 'custom://');
+     * Example:
+     * ```
+     * Url::parse('example.com'); // Defaults to 'https://example.com'
+     * Url::parse('example.com', ['http://', 'custom://'], 'custom://');
      * ```
      *
      * @param  string  $url               The URL string to parse. If it does not start with a supported protocol,
