@@ -1,17 +1,38 @@
-version: '3.8'
-
 services:
-  php72composer:
+  php71composer:
     build:
-      context: docker/php72
+      context: docker/php71
       target: composer
     volumes:
       - ./:/app
 
-  php72:
+  php71install:
     build:
-      context: docker/php72
-      target: php
+      context: docker/php71
+      target: composer
+    volumes:
+      - ./:/app
+    command: composer install
+
+  php71update:
+    build:
+      context: docker/php71
+      target: composer
+    volumes:
+      - ./:/app
+    command: composer update
+
+  php71:
+    build:
+      context: docker/php71
+      target: base
+    volumes:
+      - ./:/app
+
+  php71debug:
+    build:
+      context: docker/php71
+      target: debug
     volumes:
       - ./:/app
 
@@ -20,17 +41,3 @@ services:
     volumes:
       - ./:/code
     command: fix src
-
-  php80composer:
-    build:
-      context: docker/php80
-      target: composer
-    volumes:
-      - ./:/app
-
-  php80:
-    build:
-      context: docker/php80
-      target: php
-    volumes:
-      - ./:/app

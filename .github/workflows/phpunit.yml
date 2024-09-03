@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-php-
 
       - name: Install Composer dependencies
-        run: docker compose run --rm php72composer composer install --prefer-dist --no-progress --no-suggest
+        run: docker compose run --rm php71composer composer install --prefer-dist --no-progress --no-suggest
 
       - name: Run PHP-CS-Fixer
         run: docker run --rm -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3.57.0-php7.4} fix src
@@ -53,10 +53,10 @@ jobs:
             git commit -m "Apply PHP-CS-Fixer changes"
             git push
             # Run PHPUnit tests after committing formatting changes
-            docker compose run --rm php72 vendor/bin/phpunit
+            docker compose run --rm php71 vendor/bin/phpunit
           else
             echo "No changes to commit. Running PHPUnit tests."
-            docker compose run --rm php72 vendor/bin/phpunit
+            docker compose run --rm php71 vendor/bin/phpunit
           fi
       - name: Run PHPUnit tests
-        run: docker compose run --rm php72 vendor/bin/phpunit
+        run: docker compose run --rm php71 vendor/bin/phpunit

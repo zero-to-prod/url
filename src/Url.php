@@ -4,9 +4,16 @@ namespace Zerotoprod\Url;
 
 
 /**
- * Class Url
- *
  * Represents the components of a parsed URL.
+ * ```
+ *  Url::from([
+ *      Url::host = 'google.com',
+ *      // additional keys
+ *  ]);
+ *  Url::from(parse_url('google.com'));
+ * ```
+ * @see Parsable::parse()
+ * @see https://www.php.net/manual/en/function.parse-url.php
  */
 readonly class Url
 {
