@@ -1,6 +1,6 @@
 # `Zerotoprod\Url`
 
-A PHP class for representing URL components.
+Parse and access url components with a class.
 
 [<img src="./coverart.webp" width="150px" />](https://spatie.be/github-ad-click/ssl-certificate)
 

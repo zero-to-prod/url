@@ -1,10 +1,11 @@
 {
   "type": "library",
   "name": "zero-to-prod/url",
-  "description": "A Model of a Url",
+  "description": "Parse and access url components with a class",
   "keywords": [
-    "zero-to-prod",
-    "Url"
+    "zero-to-prod/url",
+    "url",
+    "zero-to-prod"
   ],
   "homepage": "https://github.com/zero-to-prod/url",
   "license": "MIT",
@@ -30,14 +31,7 @@
       "Tests\\": "tests/"
     }
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "suggest": {
     "zero-to-prod/transformable": "Transform a class into different types."
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "sh ./post-install-cmd.sh"
-    ]
   }
 }
