@@ -3,7 +3,6 @@
   "name": "zero-to-prod/url",
   "description": "Parse and access url components with a class",
   "keywords": [
-    "zero-to-prod/url",
     "url",
     "zero-to-prod"
   ],
