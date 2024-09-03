@@ -6,7 +6,7 @@ A PHP class for representing URL components.
 
 ## Installation
 
-You can install the package via Composer:
+Install the package via Composer:
 
 ```bash
 composer require zerotoprod/url
@@ -27,7 +27,7 @@ $url = Url::from(
     parse_url('example.com')
 ); 
 
-echo $url->host // 'example.com'
+$url->host // 'example.com'
 
 // From array 
 $url = Url::from(
@@ -40,7 +40,7 @@ $url = Url::from(
     ]
 );
 
-echo $url->host; // 'example.com'
+$url->host; // 'example.com'
 ```
 
 ## Suggested Traits

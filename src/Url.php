@@ -15,7 +15,7 @@ namespace Zerotoprod\Url;
  * @see Parsable::parse()
  * @see https://www.php.net/manual/en/function.parse-url.php
  */
-readonly class Url
+class Url
 {
 
     public const scheme = 'scheme';
@@ -29,43 +29,59 @@ readonly class Url
 
     /**
      * The scheme component of the URL (e.g., "http" or "https").
+     *
+     * @var string|null
      */
-    public string $scheme;
+    public $scheme;
 
     /**
      * The host component of the URL (e.g., "www.example.com").
+     *
+     * @var string|null
      */
-    public string $host;
+    public $host;
 
     /**
      * The port component of the URL (e.g., "80" or "443").
+     *
+     * @var int|null
      */
-    public int $port;
+    public $port;
 
     /**
      * The user component of the URL (e.g., "username" in "username:password@example.com").
+     *
+     * @var string|null
      */
-    public string $user;
+    public $user;
 
     /**
      * The password component of the URL (e.g., "password" in "username:password@example.com").
+     *
+     * @var string|null
      */
-    public string $pass;
+    public $pass;
 
     /**
      * The path component of the URL (e.g., "/path/to/page").
+     *
+     * @var string|null
      */
-    public string $path;
+    public $path;
 
     /**
      * The query component of the URL (e.g., "query=string" in "?query=string").
+     *
+     * @var string|null
      */
-    public string $query;
+    public $query;
 
     /**
      * The fragment component of the URL (e.g., "section1" in "#section1").
+     *
+     * @var string|null
      */
-    public string $fragment;
+    public $fragment;
 
     public static function from($items = null): self
     {

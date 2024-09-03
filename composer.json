@@ -37,8 +37,7 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "@echo Thank you for installing zero-to-prod/url!",
-      "@echo Visit our repository at: https://github.com/zero-to-prod/url"
+      "sh ./post-install-cmd.sh"
     ]
   }
 }
