@@ -2,6 +2,8 @@
 
 A PHP class for representing URL components.
 
+[<img src="./coverart.webp" width="150px" />](https://spatie.be/github-ad-click/ssl-certificate)
+
 ## Installation
 
 You can install the package via Composer:
@@ -43,6 +45,29 @@ echo $url->host; // 'example.com'
 
 ## Suggested Traits
 
+### Parsable
+
+The Parsable trait provides a method for parsing a URL string and ensuring that it starts with a supported protocol. This is useful when you want to
+handle various types of URLs and ensure they conform to a specific format before processing.
+
+#### Installation
+
+The Parsable trait is included within this package, so no additional installation is required.
+
+#### Usage
+
+To use the `Zerotoprod\Url\Parsable` trait in your class, simply include it:
+
+```php
+class Url extends \Zerotoprod\Url\Url
+{
+    use \Zerotoprod\Url\Parsable;
+}
+
+Url::parse('example.com'); // Defaults to 'https://example.com'
+Url::parse('example.com', 'custom://', ['http://', 'custom://']);
+```
+
 ### Transformable
 
 The [Transformable](https://github.com/zero-to-prod/transformable) trait provides methods to convert an object’s properties into an array or a JSON
@@ -68,23 +93,4 @@ $Url = Url::from(
 
 $array = $Url->toArray();
 $json = $Url->toJson();
-```
-
-### Parsable
-The Parsable trait provides a method for parsing a URL string and ensuring that it starts with a supported protocol. This is useful when you want to handle various types of URLs and ensure they conform to a specific format before processing.
-
-#### Installation
-The Parsable trait is included within this package, so no additional installation is required.
-
-#### Usage
-To use the `Zerotoprod\Url\Parsable` trait in your class, simply include it:
-
-```php
-class Url extends \Zerotoprod\Url\Url
-{
-    use \Zerotoprod\Url\Parsable;
-}
-
-$url = Url::parse('example.com'); // Defaults to 'https://example.com'
-$urlWithCustomProtocol = Url::parse('example.com', 'custom://', ['http://', 'custom://']);
 ```
