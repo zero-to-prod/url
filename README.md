@@ -31,7 +31,7 @@ $url = Url::from(
 
 $url->host // 'example.com'
 
-/* From array */
+// Using array 
 $url = Url::from(
     [
         Url::scheme => 'https',
