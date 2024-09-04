@@ -2,6 +2,19 @@
 
 namespace Zerotoprod\Url;
 
+/**
+ * Trait for parsing and validating URL strings.
+ *
+ * Ensures a URL starts with a supported protocol and parses it into a `Url` object.
+ * If the URL lacks a protocol, a default is prepended.
+ *
+ * Example:
+ * ```
+ * Url::parse('example.com'); // Returns Url for 'https://example.com'
+ * ```
+ *
+ * @see https://github.com/zero-to-prod/url
+ */
 trait Parsable
 {
     /**
@@ -31,6 +44,7 @@ trait Parsable
      * @return Url An instance of the `Url` class representing the parsed URL.
      *
      * @see Url
+     * @see https://github.com/zero-to-prod/url
      */
     public static function parse(string $url, string $default_protocol = 'https://', array $protocols = []): Url
     {

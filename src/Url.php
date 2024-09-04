@@ -2,7 +2,6 @@
 
 namespace Zerotoprod\Url;
 
-
 /**
  * Represents the components of a parsed URL.
  * ```
@@ -12,8 +11,10 @@ namespace Zerotoprod\Url;
  *  ]);
  *  Url::from(parse_url('google.com'));
  * ```
- * @see Parsable::parse()
- * @see https://www.php.net/manual/en/function.parse-url.php
+ *
+ * @see     Parsable::parse()
+ * @see     https://www.php.net/manual/en/function.parse-url.php
+ * @see     https://github.com/zero-to-prod/url
  */
 class Url
 {
@@ -83,6 +84,20 @@ class Url
      */
     public $fragment;
 
+    /**
+     * Represents the components of a parsed URL.
+     * ```
+     *  Url::from([
+     *      Url::host = 'google.com',
+     *      // additional keys
+     *  ]);
+     *  Url::from(parse_url('google.com'));
+     * ```
+     *
+     * @see     Parsable::parse()
+     * @see     https://www.php.net/manual/en/function.parse-url.php
+     * @see     https://github.com/zero-to-prod/url
+     */
     public static function from($items = null): self
     {
         $self = new self;

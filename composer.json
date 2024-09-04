@@ -1,7 +1,7 @@
 {
   "type": "library",
   "name": "zero-to-prod/url",
-  "description": "Parse and access url components with a class.",
+  "description": "Parse a url into a class.",
   "keywords": [
     "url",
     "zero-to-prod"
