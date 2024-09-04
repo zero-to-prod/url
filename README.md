@@ -1,4 +1,8 @@
 # `Zerotoprod\Url`
+[![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/url)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/zero-to-prod/url.svg)](https://packagist.org/packages/zero-to-prod/url)
+![test](https://github.com/zero-to-prod/url/actions/workflows/phpunit.yml/badge.svg)
+![Downloads](https://img.shields.io/packagist/dt/zero-to-prod/url.svg?style=flat-square&#41;]&#40;https://packagist.org/packages/zero-to-prod/url&#41)
 
 Parse and access url components with a class.
 
