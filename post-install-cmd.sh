@@ -1,7 +1,0 @@
-echo 'Thank you for installing zero-to-prod/url'
-echo 'Visit our repository at: https://github.com/zero-to-prod/url'
-echo ''
-echo 'SUGGESTED PACKAGES'
-echo '- composer require zerotoprod/url'
-echo '    Transform a class into different types'
-echo '    https://github.com/zero-to-prod/transformable'

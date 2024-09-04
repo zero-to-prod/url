@@ -2,8 +2,6 @@
 
 Parse and access url components with a class.
 
-[<img src="./coverart.webp" width="150px" />](https://spatie.be/github-ad-click/ssl-certificate)
-
 ## Installation
 
 Install the package via Composer:
