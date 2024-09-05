@@ -32,15 +32,11 @@ $url = Url::from(
 $url->host // 'example.com'
 
 // Passing an array 
-$url = Url::from(
-    [
-        Url::scheme => 'https',
-        Url::host => 'example.com',
-        Url::port => 443,
-        Url::path => '/path',
-        Url::query => 'key=value',
-    ]
-);
+$url = Url::new()
+        ->set_host('example.com')
+        ->set_scheme('https')
+        ->set_path('/search')
+        ->set_query('q=openai');
 
 $url->host; // 'example.com'
 ```

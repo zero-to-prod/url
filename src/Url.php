@@ -2,22 +2,36 @@
 
 namespace Zerotoprod\Url;
 
+use Zerotoprod\DynamicSetter\DynamicSetter;
+
 /**
  * Represents the components of a parsed URL.
  * ```
- *  Url::from([
- *      Url::host = 'google.com',
- *      // additional keys
- *  ]);
+ *  Url::new()
+ *      ->set_host('google.com')
+ *      ->set_scheme('https')
+ *      ->set_path('/search')
+ *      ->set_query('q=openai');
+ * 
  *  Url::from(parse_url('google.com'));
  * ```
  *
  * @see     Parsable::parse()
  * @see     https://www.php.net/manual/en/function.parse-url.php
  * @see     https://github.com/zero-to-prod/url
+ *
+ * @method self set_scheme(string|null $scheme)
+ * @method self set_host(string|null $host)
+ * @method self set_port(int|null $port)
+ * @method self set_user(string|null $user)
+ * @method self set_pass(string|null $pass)
+ * @method self set_path(string|null $path)
+ * @method self set_query(string|null $query)
+ * @method self set_fragment(string|null $fragment)
  */
 class Url
 {
+    use DynamicSetter;
 
     public const scheme = 'scheme';
     public const host = 'host';
