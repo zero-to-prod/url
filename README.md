@@ -40,6 +40,41 @@ $url = Url::new()
 
 $url->host; // 'example.com'
 ```
+## Helper Methods
+
+The `Url` class includes several helper methods for constructing URLs with specific schemes and ports.
+
+```php
+<?php
+
+use Zerotoprod\Url\Url;
+
+// Create a new URL instance and set the host
+$url = Url::new()->set_host('example.com');
+
+// Using the toProtocol method with custom schemes and ports
+echo $url->toProtocol('http');  // Outputs: "http://example.com:8080"
+echo $url->toProtocol('https', 8081);  // Outputs: "https://example.com:8081"
+
+
+// Using different helper methods to generate URLs for various schemes
+echo $url->toSsl();      // Outputs: "ssl://example.com:443"
+echo $url->toFtp();      // Outputs: "ftp://example.com:21"
+echo $url->toFtps();     // Outputs: "ftps://example.com:990"
+echo $url->toSftp();     // Outputs: "sftp://example.com:22"
+echo $url->toTcp();      // Outputs: "tcp://example.com:80"
+echo $url->toUdp();      // Outputs: "udp://example.com:53"
+echo $url->toTls();      // Outputs: "tls://example.com:443"
+echo $url->toWs();       // Outputs: "ws://example.com:80"
+echo $url->toWss();      // Outputs: "wss://example.com:443"
+echo $url->toPop3();     // Outputs: "pop3://example.com:110"
+echo $url->toImap();     // Outputs: "imap://example.com:143"
+echo $url->toSmtp();     // Outputs: "smtp://example.com:25"
+
+// Optionally, you can pass a custom port to any of these methods
+echo $url->toSsl(8443);  // Outputs: "ssl://example.com:8443"
+echo $url->toFtp(2121);  // Outputs: "ftp://example.com:2121"
+```
 
 ## Suggested Traits
 
