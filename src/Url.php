@@ -140,7 +140,7 @@ class Url
      */
     public function toProtocol(string $scheme = null, int $port = null): string
     {
-        $scheme = $this->scheme ?? $scheme;
+        $scheme = $scheme ?? $this->scheme;
         $port = $this->port ?? $port;
         $host = $this->host ?? $this->path;
 
