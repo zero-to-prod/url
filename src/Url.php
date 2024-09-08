@@ -33,19 +33,69 @@ class Url
 {
     use DynamicSetter;
 
+    /**
+     * The scheme component of the URL (e.g., "http" or "https").
+     *
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
+     */
     public const scheme = 'scheme';
+    /**
+     * The host component of the URL (e.g., "www.example.com").
+     *
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
+     */
     public const host = 'host';
+    /**
+     * The port component of the URL (e.g., "80" or "443").
+     *
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
+     */
     public const port = 'port';
+    /**
+     * The user component of the URL (e.g., "username" in "username:password@example.com").
+     *
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
+     */
     public const user = 'user';
+    /**
+     * The password component of the URL (e.g., "password" in "username:password@example.com").
+     *
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
+     */
     public const pass = 'pass';
+    /**
+     * The path component of the URL (e.g., "/path/to/page").
+     *
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
+     */
     public const path = 'path';
+    /**
+     * The query component of the URL (e.g., "query=string" in "?query=string").
+     *
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
+     */
     public const query = 'query';
+    /**
+     * The fragment component of the URL (e.g., "section1" in "#section1").
+     *
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
+     */
     public const fragment = 'fragment';
 
     /**
      * The scheme component of the URL (e.g., "http" or "https").
      *
      * @var string|null
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
      */
     public $scheme;
 
@@ -53,6 +103,8 @@ class Url
      * The host component of the URL (e.g., "www.example.com").
      *
      * @var string|null
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
      */
     public $host;
 
@@ -60,6 +112,8 @@ class Url
      * The port component of the URL (e.g., "80" or "443").
      *
      * @var int|null
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
      */
     public $port;
 
@@ -67,6 +121,8 @@ class Url
      * The user component of the URL (e.g., "username" in "username:password@example.com").
      *
      * @var string|null
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
      */
     public $user;
 
@@ -74,6 +130,8 @@ class Url
      * The password component of the URL (e.g., "password" in "username:password@example.com").
      *
      * @var string|null
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
      */
     public $pass;
 
@@ -81,6 +139,8 @@ class Url
      * The path component of the URL (e.g., "/path/to/page").
      *
      * @var string|null
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
      */
     public $path;
 
@@ -88,6 +148,8 @@ class Url
      * The query component of the URL (e.g., "query=string" in "?query=string").
      *
      * @var string|null
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
      */
     public $query;
 
@@ -95,6 +157,8 @@ class Url
      * The fragment component of the URL (e.g., "section1" in "#section1").
      *
      * @var string|null
+     * @link https://php.net/manual/en/function.parse-url.php
+     * @see https://github.com/zero-to-prod/url
      */
     public $fragment;
 
@@ -108,9 +172,8 @@ class Url
      *  Url::from(parse_url('google.com'));
      * ```
      *
-     * @see     Parsable::parse()
-     * @see     https://www.php.net/manual/en/function.parse-url.php
-     * @see     https://github.com/zero-to-prod/url
+     * @link     https://www.php.net/manual/en/function.parse-url.php
+     * @see      https://github.com/zero-to-prod/url
      */
     public static function from($items = null): self
     {
@@ -141,7 +204,7 @@ class Url
     public function toProtocol(string $scheme = null, int $port = null): string
     {
         $scheme = $scheme ?? $this->scheme;
-        $port = $this->port ?? $port;
+        $port = $port ?? $this->port;
         $host = $this->host ?? $this->path;
 
         return $scheme.'://'.$host.':'.$port;
@@ -157,8 +220,8 @@ class Url
      *
      * @return string  The constructed SSL URL in the format "ssl://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toSsl(int $port = 443): string
     {
@@ -175,8 +238,8 @@ class Url
      *
      * @return string  The constructed FTP URL in the format "ftp://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toFtp(int $port = 21): string
     {
@@ -193,8 +256,8 @@ class Url
      *
      * @return string  The constructed FTPS URL in the format "ftps://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toFtps(int $port = 990): string
     {
@@ -211,8 +274,8 @@ class Url
      *
      * @return string  The constructed SFTP URL in the format "sftp://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toSftp(int $port = 22): string
     {
@@ -229,8 +292,8 @@ class Url
      *
      * @return string  The constructed TCP URL in the format "tcp://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toTcp(int $port = 80): string
     {
@@ -247,8 +310,8 @@ class Url
      *
      * @return string  The constructed UDP URL in the format "udp://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toUdp(int $port = 53): string
     {
@@ -270,8 +333,8 @@ class Url
      *
      * @return string  The constructed TLS URL in the format "tls://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toWs(int $port = 80): string
     {
@@ -288,8 +351,8 @@ class Url
      *
      * @return string  The constructed WSS URL in the format "wss://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toWss(int $port = 443): string
     {
@@ -306,8 +369,8 @@ class Url
      *
      * @return string  The constructed POP3 URL in the format "pop3://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toPop3(int $port = 110): string
     {
@@ -324,8 +387,8 @@ class Url
      *
      * @return string  The constructed IMAP URL in the format "imap://{host}:{port}".
      *
-     * @link     self::toProtocol()
-     * @see      https://github.com/zero-to-prod/url
+     * @see       Url::toProtocol()
+     * @link      https://github.com/zero-to-prod/url
      */
     public function toImap(int $port = 143): string
     {
@@ -342,7 +405,7 @@ class Url
      *
      * @return string  The constructed SMTP URL in the format "smtp://{host}:{port}".
      *
-     * @see      self::toProtocol()
+     * @see      Url::toProtocol()
      * @link     https://github.com/zero-to-prod/url
      */
     public function toSmtp(int $port = 25): string

@@ -134,6 +134,17 @@ class ParseTest extends TestCase
      *
      * @see Url
      */
+    public function overrides_port(): void
+    {
+        $Url = BaseUrl::from(parse_url('ssl://example.com:443'));
+        $this->assertEquals('https://example.com:444', $Url->toProtocol('https', 444));
+    }
+
+    /**
+     * @test
+     *
+     * @see Url
+     */
     public function to_protocol_from_uri_with_custom_port(): void
     {
         $Url = BaseUrl::from(parse_url('ssl://example.com:444'));
