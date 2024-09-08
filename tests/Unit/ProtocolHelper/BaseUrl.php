@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Url;
+namespace Tests\Unit\ProtocolHelper;
 
 use Zerotoprod\Url\Url;
 

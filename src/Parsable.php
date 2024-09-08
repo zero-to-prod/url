@@ -17,6 +17,7 @@ namespace Zerotoprod\Url;
  */
 trait Parsable
 {
+
     /**
      * Parses a URL string and ensures that it starts with a supported protocol.
      *
