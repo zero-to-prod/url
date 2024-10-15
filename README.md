@@ -1,8 +1,11 @@
 # `Zerotoprod\Url`
+
 [![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/url)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/zero-to-prod/url.svg)](https://packagist.org/packages/zero-to-prod/url)
-![test](https://github.com/zero-to-prod/url/actions/workflows/phpunit.yml/badge.svg)
-![Downloads](https://img.shields.io/packagist/dt/zero-to-prod/url.svg?style=flat-square&#41;]&#40;https://packagist.org/packages/zero-to-prod/url&#41)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/url/phpunit.yml?label=tests)](https://github.com/zero-to-prod/url/actions)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/url?color=blue)](https://packagist.org/packages/zero-to-prod/url/stats)
+[![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/url?color=f28d1a)](https://packagist.org/packages/zero-to-prod/url)
+[![GitHub repo size](https://img.shields.io/github/repo-size/zero-to-prod/url)](https://github.com/zero-to-prod/url)
+[![License](https://img.shields.io/packagist/l/zero-to-prod/url?color=red)](https://github.com/zero-to-prod/url/blob/main/LICENSE.md)
 
 Parse and access url components with a class.
 
@@ -40,6 +43,7 @@ $url = Url::new()
 
 $url->host; // 'example.com'
 ```
+
 ## Helper Methods
 
 The `Url` class includes several helper methods for constructing URLs with specific schemes and ports.
