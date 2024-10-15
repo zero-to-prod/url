@@ -4,7 +4,6 @@ namespace Zerotoprod\Url;
 
 trait ProtocolHelper
 {
-
     /**
      * Constructs a URL string based on the provided scheme, port, and host.
      *
