@@ -6,6 +6,7 @@
 [![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/url?color=f28d1a)](https://packagist.org/packages/zero-to-prod/url)
 [![GitHub repo size](https://img.shields.io/github/repo-size/zero-to-prod/url)](https://github.com/zero-to-prod/url)
 [![License](https://img.shields.io/packagist/l/zero-to-prod/url?color=red)](https://github.com/zero-to-prod/url/blob/main/LICENSE.md)
+[![Hits-of-Code](https://hitsofcode.com/github/zero-to-prod//url?branch=main)](https://hitsofcode.com/github/zero-to-prod//url/view?branch=main)
 
 Parse and access url components with a class.
 
