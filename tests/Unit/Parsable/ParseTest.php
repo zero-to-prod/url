@@ -27,7 +27,7 @@ class ParseTest extends TestCase
         $this->assertEquals($expected[Url::fragment], $Url->fragment);
     }
 
-    public function urlProvider(): array
+    public static function urlProvider(): array
     {
         return [
             [
