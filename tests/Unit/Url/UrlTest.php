@@ -27,7 +27,7 @@ class UrlTest extends TestCase
         $this->assertEquals($expected[Url::fragment], $Url->fragment);
     }
 
-    public function urls(): array
+    public static function urls(): array
     {
         return [
             [
