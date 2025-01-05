@@ -7,6 +7,13 @@
     "zero-to-prod"
   ],
   "homepage": "https://github.com/zero-to-prod/url",
+  "support": {
+    "email": "dave0016@gmail.com",
+    "issues": "https://github.com/zero-to-prod/url/issues",
+    "source": "https://github.com/zero-to-prod/url",
+    "docs": "https://zero-to-prod.github.io/url",
+    "security": "https://github.com/zero-to-prod/url/blob/main/SECURITY.md"
+  },
   "license": "MIT",
   "readme": "./README.md",
   "authors": [
@@ -36,12 +43,12 @@
     "docker": "runs a docker container"
   },
   "require": {
-    "php": "^7.1",
+    "php": ">=7.1",
     "zero-to-prod/dynamic-setter": "^71.0",
     "zero-to-prod/data-model": "^71.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^7.0"
+    "phpunit/phpunit": "*"
   },
   "autoload": {
     "psr-4": {
