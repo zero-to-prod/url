@@ -15,7 +15,7 @@ Parse and access url components with a class.
 Install the package via Composer:
 
 ```bash
-composer require zerotoprod/url
+composer require zero-to-prod/url
 ```
 
 ## Usage
@@ -112,7 +112,7 @@ The [Transformable](https://github.com/zero-to-prod/transformable) trait provide
 string. This is particularly useful for serializing your data models.
 
 ```bash
-composer require zerotoprod/transformable
+composer require zero-to-prod/transformable
 ```
 
 #### Usage
