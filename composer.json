@@ -1,7 +1,7 @@
 {
   "type": "library",
   "name": "zero-to-prod/url",
-  "description": "Parse a url into a class.",
+  "description": "A DataModel for a Url",
   "keywords": [
     "url",
     "zero-to-prod"
