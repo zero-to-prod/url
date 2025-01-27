@@ -33,7 +33,7 @@
   "require": {
     "php": ">=7.1",
     "zero-to-prod/dynamic-setter": "^71.0",
-    "zero-to-prod/data-model": "^71.0"
+    "zero-to-prod/data-model": "^81.0"
   },
   "require-dev": {
     "phpunit/phpunit": "*"
