@@ -35,6 +35,7 @@ class Url
     use DynamicSetter;
     use DataModel;
     use ProtocolHelper;
+    use Parsable;
 
     /**
      * The scheme component of the URL (e.g., "http" or "https").
