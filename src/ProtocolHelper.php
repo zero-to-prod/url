@@ -17,6 +17,7 @@ trait ProtocolHelper
      * @return string  The constructed URL in the format "{scheme}://{host}:{port}".
      *
      * @see     https://github.com/zero-to-prod/url
+     * @link    https://github.com/zero-to-prod/url
      */
     public function toProtocol(string $scheme = null, int $port = null): string
     {
@@ -135,6 +136,9 @@ trait ProtocolHelper
         return $this->toProtocol('udp', $port);
     }
 
+    /**
+     * @link https://github.com/zero-to-prod/url
+     */
     public function toTls(int $port = 443): string
     {
         return $this->toProtocol('tls', $port);

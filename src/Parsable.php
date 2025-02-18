@@ -43,8 +43,8 @@ trait Parsable
      *
      * @return Url An instance of the `Url` class representing the parsed URL.
      *
-     * @see Url
-     * @see https://github.com/zero-to-prod/url
+     * @see  Url
+     * @link https://github.com/zero-to-prod/url
      */
     public static function parse(string $url, string $default_protocol = 'https://', array $protocols = []): Url
     {

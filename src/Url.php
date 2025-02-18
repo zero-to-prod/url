@@ -29,6 +29,7 @@ use Zerotoprod\DynamicSetter\DynamicSetter;
  * @method self set_path(string|null $path)
  * @method self set_query(string|null $query)
  * @method self set_fragment(string|null $fragment)
+ * @link    https://github.com/zero-to-prod/url
  */
 class Url
 {
@@ -41,56 +42,56 @@ class Url
      * The scheme component of the URL (e.g., "http" or "https").
      *
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public const scheme = 'scheme';
     /**
      * The host component of the URL (e.g., "www.example.com").
      *
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public const host = 'host';
     /**
      * The port component of the URL (e.g., "80" or "443").
      *
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public const port = 'port';
     /**
      * The user component of the URL (e.g., "username" in "username:password@example.com").
      *
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public const user = 'user';
     /**
      * The password component of the URL (e.g., "password" in "username:password@example.com").
      *
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public const pass = 'pass';
     /**
      * The path component of the URL (e.g., "/path/to/page").
      *
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public const path = 'path';
     /**
      * The query component of the URL (e.g., "query=string" in "?query=string").
      *
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public const query = 'query';
     /**
      * The fragment component of the URL (e.g., "section1" in "#section1").
      *
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public const fragment = 'fragment';
 
@@ -99,7 +100,7 @@ class Url
      *
      * @var string|null
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public $scheme;
 
@@ -108,7 +109,7 @@ class Url
      *
      * @var string|null
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public $host;
 
@@ -117,7 +118,7 @@ class Url
      *
      * @var int|null
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public $port;
 
@@ -126,7 +127,7 @@ class Url
      *
      * @var string|null
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public $user;
 
@@ -135,7 +136,7 @@ class Url
      *
      * @var string|null
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public $pass;
 
@@ -144,7 +145,7 @@ class Url
      *
      * @var string|null
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public $path;
 
@@ -153,7 +154,7 @@ class Url
      *
      * @var string|null
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public $query;
 
@@ -162,7 +163,7 @@ class Url
      *
      * @var string|null
      * @link https://php.net/manual/en/function.parse-url.php
-     * @see  https://github.com/zero-to-prod/url
+     * @link https://github.com/zero-to-prod/url
      */
     public $fragment;
 }
