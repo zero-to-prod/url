@@ -30,6 +30,7 @@ use Zerotoprod\DynamicSetter\DynamicSetter;
  * @method self set_query(string|null $query)
  * @method self set_fragment(string|null $fragment)
  * @link    https://github.com/zero-to-prod/url
+ * A DataModel for a Url
  */
 class Url
 {
