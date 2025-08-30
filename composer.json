@@ -51,5 +51,8 @@
   },
   "suggest": {
     "zero-to-prod/transformable": "Transform a class into different types."
-  }
+  },
+  "bin": [
+    "bin/zero-to-prod-url"
+  ]
 }
