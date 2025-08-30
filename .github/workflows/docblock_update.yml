@@ -168,7 +168,8 @@ jobs:
                        --no-verify
           
             # Push changes - using PAT_TOKEN if available to trigger workflows properly
-            git push
+            # Push to the actual branch name, not the PR ref
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
           
             echo "Docblock updates committed and pushed successfully."
             echo "Other workflows will run on the new commit."
