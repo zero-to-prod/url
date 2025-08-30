@@ -16,6 +16,8 @@
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Documentation Publishing](#documentation-publishing)
+  - [Automatic Documentation Publishing](#automatic-documentation-publishing)
 - [Usage](#usage)
     - [Helper Methods](#helper-methods)
 - [Suggested Traits](#suggested-traits)
@@ -39,6 +41,39 @@ composer require zero-to-prod/url
 ```
 
 This will add the package to your project’s dependencies and create an autoloader entry for it.
+
+## Documentation Publishing
+
+You can publish this README to your local documentation directory.
+
+This can be useful for providing documentation for AI agents.
+
+This can be done using the included script:
+
+```bash
+# Publish to default location (./docs/zero-to-prod/url)
+vendor/bin/zero-to-prod-url
+
+# Publish to custom directory
+vendor/bin/zero-to-prod-url /path/to/your/docs
+```
+
+### Automatic Documentation Publishing
+
+You can automatically publish documentation by adding the following to your `composer.json`:
+
+```json
+{
+  "scripts": {
+    "post-install-cmd": [
+      "zero-to-prod-url"
+    ],
+    "post-update-cmd": [
+      "zero-to-prod-url"
+    ]
+  }
+}
+```
 
 ## Usage
 
