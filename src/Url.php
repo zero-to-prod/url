@@ -29,8 +29,6 @@ use Zerotoprod\DynamicSetter\DynamicSetter;
  * @method self set_path(string|null $path)
  * @method self set_query(string|null $query)
  * @method self set_fragment(string|null $fragment)
- * A DataModel for a Url
- * @link https://github.com/zero-to-prod/url
  */
 class Url
 {

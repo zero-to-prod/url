@@ -167,9 +167,9 @@ jobs:
             git commit -m "Update docblocks with @link annotations" \
                        --no-verify
           
-            # Push changes - using PAT_TOKEN if available to trigger workflows properly
-            # Push to the actual branch name, not the PR ref
-            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+            # Push changes - explicitly push to the branch name from the PR
+            echo "Pushing to branch: ${{ github.head_ref }}"
+            git push origin HEAD:${{ github.head_ref }}
           
             echo "Docblock updates committed and pushed successfully."
             echo "Other workflows will run on the new commit."
